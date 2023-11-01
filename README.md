@@ -33,9 +33,9 @@ JIRA 是一個缺陷跟蹤管理系統 ( Bug tracking system )，為針對缺陷
 Jira 管理系統其資料結構如下：
 
 + [專案](#專案)
-    - 大型工作
-        + 議題
-            - 子議題
+    - [議題](#議題)
+        + [大型工作](#大型工作)
+        + [子議題](#子議題)
 
 ### 專案
 
@@ -51,9 +51,29 @@ Jira 中可建立多個專案，以此區分對應不同軟體項目的設計議
 
 ### 議題
 
-### 子議題
+Jira 對專案管理是根據敏捷開發 [Scrum](https://glints.com/tw/blog/learn-scrum-methodology-in-10-minutes/) 概念而設計，對於軟體需求的故事會拆解成無數個議題，從而在 Sprint 中逐次消化。
 
-### 議題連結
+而每個議題可以擁有幾個關係：
+
++ 所屬的大型工作 ( Epic )
++ 可細分的子議題 ( Sub Issue )
++ 議題間的連結 ( Issue Linking )
+
+#### 大型工作
+
+大型工作 ( Epic ) 是指一個龐大的故事、任務組合的大型議題，若要對大型工作描述，則其要執行的內容屬於概念、待設計、尚有調整必要的議題，而其下的議題則是對此工作的解釋與調整。
+
+![](./img/jira-software-epic.png)
+
+在篩選議題列表時，可以依據指派對象、大型工作 ( 所屬、無所屬 ) 來呈現；此外，若發現無所屬的議題可歸屬於大型工作，僅需點選後拖曳至大型工作的看板或在議題檢視的面板選擇新增大型工作來添加連結。
+
+![](./img/jira-software-epic-kanban.png)
+
+若將議題拖曳至衝刺 ( Sprint ) 中，則可以在看板介面呈現各議題的執行狀態，此時若有大型工作歸屬，可如上圖使用大型工作來做分組依據。
+
+#### 子議題
+
+#### 議題連結
 
 ### 衝刺 ( Sprint )
 
@@ -88,3 +108,6 @@ Jira 中可建立多個專案，以此區分對應不同軟體項目的設計議
 + [jira-cli - Github](https://github.com/ankitpokhrel/jira-cli/tree/main)
     - [Jira - Python](https://jira.readthedocs.io/installation.html)
         + [Jira - pip](https://pypi.org/project/jira/)
++ 教學文獻
+    - [【Jira 專案管理】Jira是什麽？如何用？詳細教學Scrum＋看板！](https://projectmanager.com.tw/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/jira-%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/)
+    - [敏捷系列 | 一次搞懂敏捷專案管理中的Epic、Story/Task與Subtask](https://medium.com/alexchanglife/bc801f26e677)
