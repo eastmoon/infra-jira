@@ -100,11 +100,24 @@ Jira 對專案管理是根據敏捷開發 [Scrum](https://glints.com/tw/blog/lea
 
 ### 衝刺 ( Sprint )
 
+在 Scrum 中，衝刺 ( Sprint ) 是一個持續開發週期，每個衝刺開始、結束都會討論並基於當前衝刺碰到的問題微調當前的方向與設計。
+
+因此，開發團隊可以在設計議題時，會如下圖所示，預設都會在待辦清單中，等待建立衝刺後在依序拖進其中規劃出一個衝刺要處理的議題。
+
+![](./img/jira-software-sprint.png)
+
+當衝刺規劃完成後，便可以開始衝刺，並預設實際開始時間，其後便可在看板中看到開啟的衝刺項目。
+
+![](./img/jira-software-sprint-kanban.png)
+
+當衝刺結束，僅能在時間軸中回顧已經完成的項目，反之未完成的衝刺並不會出現在時間軸內，僅會出現該衝刺預計結束的時間。
+
 ## Jira 應用服務
 
 + [Issue Checklist for Jira. Free](https://ist-devops.atlassian.net/jira/marketplace/discover/app/com.herocoders.plugins.jira.issuechecklist-free)，在單一議題中只能設定個檢核清單
 + [Checklist for Jira On-the-Fly](https://ist-devops.atlassian.net/jira/marketplace/discover/app/com.alphaserve.checklist.jira-checklist)，在單一議題中能設定多個檢核清單
 + [Checklist for Jira Cloud. Free](https://ist-devops.atlassian.net/jira/marketplace/discover/app/com.appbox.ai.checklist)，在單一議題中能設定多個檢核清單並以分頁方式呈現
++ [Issue Links Viewer](https://ist-devops.atlassian.net/jira/marketplace/discover/app/pl.com.tt.apdc.ilv)，圖形化設定當前議題對其他議題的連結
 
 ## Jira 與 Slack
 
