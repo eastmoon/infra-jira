@@ -189,10 +189,10 @@ Jira 與 Gitlab 整合，主要是透過提交程式碼過程，將修改記錄�
     - 儲存設定
 + 建立一個專案，並提交一個內容
     - commit 描述如下 ```<ISSUE_KEY> #comment <comment_string>```
+![](./img/jira-software-git-commit.png)  
+
 + 前往對應 ```<ISSUE_KEY>``` 的議題
     - commit 的內容會以超連結存在於議題中
-
-![](./img/jira-software-git-commit.png)  
 ![](./img/jira-software-git-link.png)  
 
 在文章中，可以設定 Jira 的權限，啟用 View development tools 來呈現開發面板，以達到下圖的資訊呈現。
