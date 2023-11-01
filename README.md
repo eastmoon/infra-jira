@@ -56,8 +56,8 @@ Jira 對專案管理是根據敏捷開發 [Scrum](https://glints.com/tw/blog/lea
 而每個議題可以擁有幾個關係：
 
 + 所屬的大型工作 ( Epic )
-+ 可細分的子議題 ( Sub Issue )
-+ 議題間的連結 ( Issue Linking )
++ 可細分的子議題 ( Child Issue )
++ 議題間的連結 ( Link Issue )
 
 #### 大型工作
 
@@ -73,7 +73,30 @@ Jira 對專案管理是根據敏捷開發 [Scrum](https://glints.com/tw/blog/lea
 
 #### 子議題
 
-#### 議題連結
+子議題是議題中的細項，也可以解釋成實際需執行的內容，在 Jira 中議題可以設定子議題，但子議題則不可在設定子議題，亦即就規劃最底層就屬於子議題。
+
+![](./img/jira-software-child-issue.png)
+
+子議題的建立僅能在議題中設計，若要撰寫子議題細節則需從議題中點選，或利用看板的分組依據選擇子任務來呈現子議題。
+
+![](./img/jira-software-child-issue-kanban.png)
+
+原則上，子議題之下無法再細分執行細節為議題，但倘若有在細分議題內容的處理項目，則需要安裝 Checklist 應用程式來增加可填寫的內容，或利用連結議題來設計議題間的關係做到類似檢核項目的列表。
+
+#### 連結議題
+
+無論是大型工作、議題、子議題都可設定連結，而連結的目的是建立議題間的上下關係、依賴關係，從而表達執行該議題前需先執行的內容，或描述相依內容，其後需執行的議題。
+
+![](./img/jira-software-link-issue.png)
+
+若使用圖形介面顯示，則如下圖所示。
+
+![](./img/jira-software-link-issue-graph.png)
+> 使用應用程式 [Issue Links Viewer](https://ist-devops.atlassian.net/jira/marketplace/discover/app/pl.com.tt.apdc.ilv)
+
+雖然大型工作、議題、子議題本身具有階級關係，但議題間本身屬於獨立、平行的項目，透過連結的設計，可從而達到議題間的一體性。
+
+在子議題說到，若子議題仍有細節需執行，可採用 Checklist 規劃，但若執行內容仍需符合 Scrum 的設計來計算每個 Sprint 的點數，則應該規劃為子議題並設立議題間的連結。
 
 ### 衝刺 ( Sprint )
 
