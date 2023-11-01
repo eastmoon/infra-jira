@@ -112,7 +112,9 @@ Jira 對專案管理是根據敏捷開發 [Scrum](https://glints.com/tw/blog/lea
 
 當衝刺結束，僅能在時間軸中回顧已經完成的項目，反之未完成的衝刺並不會出現在時間軸內，僅會出現該衝刺預計結束的時間。
 
-## Jira 應用服務
+## Jira 應用程式服務
+
+Jira 預設的服務雖能處理 Scrum 中的議題規劃與管理，但若需要細節資訊的撰寫、圖形化資訊、外部服務整合，則需使用 Jira 提供的應用程式服務，以下為本次調研時查詢到有用的服務；需注意，多數的應用服務都有額外收費，亦可先搜尋 Free 版本或適用該應用。
 
 + [Issue Checklist for Jira. Free](https://ist-devops.atlassian.net/jira/marketplace/discover/app/com.herocoders.plugins.jira.issuechecklist-free)，在單一議題中只能設定個檢核清單
 + [Checklist for Jira On-the-Fly](https://ist-devops.atlassian.net/jira/marketplace/discover/app/com.alphaserve.checklist.jira-checklist)，在單一議題中能設定多個檢核清單
@@ -123,9 +125,24 @@ Jira 對專案管理是根據敏捷開發 [Scrum](https://glints.com/tw/blog/lea
 
 [Atlassian Marketplace - Slack Integration+ for Jira](https://marketplace.atlassian.com/apps/1219324/slack-integration-for-jira?hosting=cloud&tab=overview)
 
+Jira 的 Slack 應用程式服務屬於官方提供的功能，其用途是提供 Slack 一個操作 Jira 的機器人，讓用戶可以在 Slack 觀看連結的 Jira 專案的狀態變化。
+
+![](./img/jira-software-slack.png)
+
+或透過 ```/jira``` 指令在頻道中詢問機器人，並取得 Jira 議題的資訊、連結，或改變指定議題的狀態。
+
+![](./img/jira-software-slack-help.png)
+
+其中最主要的操作如下：
+
++ 頻道若要使用 Slack 需在頻道內執行 /jira connect
++ 若要建立議題使用 /jira create <issue-name>
++ 若要查看議題資訊 /jira <issue-id>
++ 若要對議題操作可以選擇如 transition 以推進議題
+
 ## Jira 與 Gitlab
 
-[Atlassian Marketplace - GitLab for Jira Cloud](https://marketplace.atlassian.com/apps/1221011/gitlab-for-jira-cloud?hosting=cloud&tab=overview)
++ [Atlassian Marketplace - GitLab for Jira Cloud](https://marketplace.atlassian.com/apps/1221011/gitlab-for-jira-cloud?hosting=cloud&tab=overview)
     - [Jira issue integration - Gitlab](https://docs.gitlab.com/ee/integration/jira/configure.html)
     - [Integrate with development tools - Jira](https://support.atlassian.com/jira-cloud-administration/docs/integrate-with-development-tools/)
     - [Process issues with smart commits](https://support.atlassian.com/jira-software-cloud/docs/process-issues-with-smart-commits/)
