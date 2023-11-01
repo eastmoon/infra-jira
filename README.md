@@ -140,14 +140,6 @@ Jira 的 Slack 應用程式服務屬於官方提供的功能，其用途是提�
 + 若要查看議題資訊 /jira <issue-id>
 + 若要對議題操作可以選擇如 transition 以推進議題
 
-## Jira 與 Gitlab
-
-+ [Atlassian Marketplace - GitLab for Jira Cloud](https://marketplace.atlassian.com/apps/1221011/gitlab-for-jira-cloud?hosting=cloud&tab=overview)
-    - [Jira issue integration - Gitlab](https://docs.gitlab.com/ee/integration/jira/configure.html)
-    - [Integrate with development tools - Jira](https://support.atlassian.com/jira-cloud-administration/docs/integrate-with-development-tools/)
-    - [Process issues with smart commits](https://support.atlassian.com/jira-software-cloud/docs/process-issues-with-smart-commits/)
-    - [View development information for an issue](https://support.atlassian.com/jira-software-cloud/docs/view-development-information-for-an-issue/)
-
 ## Jira CLI
 
 Jira CLI 是一套提供給 Python 語言執行的 Jira 操作工具，使用本專案的腳本可直接建立可運行的 Docker 環境。
@@ -175,6 +167,40 @@ jira = JIRA(
 ```
 
 在文獻指 Jira Cloud 所需的 API Token，是在[帳號安全性](https://id.atlassian.com/manage-profile/security)頁面的 API 權杖，並不是[管理員](https://admin.atlassian.com/)的設定 API 金鑰。
+
+## Jira 與 Gitlab
+
++ [Atlassian Marketplace - GitLab for Jira Cloud](https://marketplace.atlassian.com/apps/1221011/gitlab-for-jira-cloud?hosting=cloud&tab=overview)
+    - [Jira issue integration - Gitlab](https://docs.gitlab.com/ee/integration/jira/configure.html)
+    - [Integrate with development tools - Jira](https://support.atlassian.com/jira-cloud-administration/docs/integrate-with-development-tools/)
+    - [Process issues with smart commits](https://support.atlassian.com/jira-software-cloud/docs/process-issues-with-smart-commits/)
+    - [View development information for an issue](https://support.atlassian.com/jira-software-cloud/docs/view-development-information-for-an-issue/)
+
+Jira 與 Gitlab 整合，主要是透過提交程式碼過程，將修改記錄與資訊動態與 Jira 連結，其底層運作原理與前面的 Jira-CLI 相同。
+
+如同前述取得一個 API 權杖後，進入 Gitlab，並步驟驗證
+
++ 前往 admin area
++ 左側選單中選擇 Settings -> Integrate
++ 右側選單中選擇 Jira
+    - 在 Web URL 填寫 ```https://<SITE-NAME>.atlassian.com```
+    - 在 Username or Email 填寫 ```email```
+    - 在 Password or API token 填寫 ```token```
+    - 儲存設定
++ 建立一個專案，並提交一個內容
+    - commit 描述如下 ```<ISSUE_KEY> #comment <comment_string>```
++ 前往對應 ```<ISSUE_KEY>``` 的議題
+    - commit 的內容會以超連結存在於議題中
+
+![](./img/jira-software-git-commit.png)  
+![](./img/jira-software-git-link.png)  
+
+在文章中，可以設定 Jira 的權限，啟用 View development tools 來呈現開發面板，以達到下圖的資訊呈現。
+
+![](./img/jira-software-git-issueView-DevPanel.png)
+> from [View development information for an issue](https://support.atlassian.com/jira-software-cloud/docs/view-development-information-for-an-issue/)
+
+由於本次調查使用免費版本無法修改權限，在此尚無法驗證是否設定可正常運作。
 
 ## 文獻
 
