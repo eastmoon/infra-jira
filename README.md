@@ -148,6 +148,28 @@ Jira 的 Slack 應用程式服務屬於官方提供的功能，其用途是提�
     - [Process issues with smart commits](https://support.atlassian.com/jira-software-cloud/docs/process-issues-with-smart-commits/)
     - [View development information for an issue](https://support.atlassian.com/jira-software-cloud/docs/view-development-information-for-an-issue/)
 
+## Jira CLI
+
+Jira CLI 是一套提供給 Python 語言執行的 Jira 操作工具，其登入可使用以下句型撰寫於 Python 腳本中：
+
+```
+# Some Authentication Methods
+jira = JIRA(
+    server="https://<SITE-NAME>.atlassian.com",
+    basic_auth=("email", "API token")
+)
+```
+
+亦可使用 ```jirashell``` 直接進入 iPython 對 Jira 進行操作
+
+```
+jirashell -s https://<SITE-NAME>.atlassian.com \
+  -u email \
+  -p API token
+```
+
+在文獻指 Jira Cloud 所需的 API Token，是在[帳號安全性](https://id.atlassian.com/manage-profile/security)頁面的 API 權杖，並不是[管理員](https://admin.atlassian.com/)的設定 API 金鑰。
+
 ## 文獻
 
 + [Atlassian Jira](https://www.atlassian.com/software/jira)
